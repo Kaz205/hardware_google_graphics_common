@@ -199,7 +199,7 @@ int BrightnessController::initDrm(const DrmDevice& drmDevice, const DrmConnector
     initDimmingUsage();
 
     mLhbmSupported = connector.lhbm_on().id() != 0;
-    mGhbmSupported = connector.hbm_mode().id() != 0;
+    mGhbmSupported = false;
 
     /* allow the first brightness to apply */
     mBrightnessFloatReq.set_dirty();
